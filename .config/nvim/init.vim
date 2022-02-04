@@ -23,8 +23,8 @@ set undofile
 set nowrap
 set autoindent
 set cursorline
-hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
-hi CursorLine   cterm=bold ctermbg=darkgrey ctermfg=NONE
+	hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
+	hi CursorLine   cterm=bold ctermbg=darkgrey ctermfg=NONE
 colorscheme nord
 
 lua << END
