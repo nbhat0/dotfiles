@@ -7,9 +7,9 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
 XTerm*renderFont: true
-XTerm*faceName: xft:Mononoki Nerd Font, \
+XTerm*faceName: xft:JetBrainsMono Nerd Font, \
                 xft:JoyPixels:size=12, \
-                xft:Monospace:style=Medium:size=12   
+                xft:Monospace:style=Medium:size=12
 XTerm*faceSize: 11
 XTerm*utf8: 2
 XTerm*locale: true
@@ -28,47 +28,45 @@ XTerm*savelines: 16384
 ! double-click to select whole URLs :D
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-! COLORS FOR SXIV
-Sxiv.foreground:   #bbc2cf
-Sxiv.background:   #282c34
-Sxiv.font: Ubuntu:style=bold:size=11
-
 
 ! FOR ALL OTHER PROGRAMS USE XRESOURCES
 ! This includes xterm and urxvt
-*.foreground:   #bbc2cf
-*.background:   #282c34
-*.cursorColor:  #bbc2cf
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-! black
-*.color0:       #1c1f24
-*.color8:       #5b6268
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
 
-! red
-*.color1:       #ff6c6b
-*.color9:       #da8548
-
-! green
-*.color2:       #98be65
-*.color10:      #4db5bd
-
-! yellow
-*.color3:       #da8548
-*.color11:      #ecbe7b
-
-! blue
-*.color4:       #51afef
-*.color12:      #3071db
-
-! magenta
-*.color5:       #c678dd
-*.color13:      #a9a1e1
-
-! cyan
-*.color6:       #5699af
-*.color14:      #46d9ff
-
-! white
-*.color7:       #202328
-*.color15:      #dfdfdf
-
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
