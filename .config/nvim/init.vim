@@ -108,7 +108,6 @@ map <leader>v :VimwikiIndex<CR>
 let g:vimwiki_list = [{'path': '~/.local/share/nvim/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
-autocmd BufRead,BufNewFile *.tex set filetype=tex
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
@@ -119,13 +118,6 @@ autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * %s/\n\+\%$//e
 autocmd BufWritePre *.[ch] %s/\%$/\r/e
 autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
-
-" When shortcut files are updated, renew bash and ranger configs with new material:
-autocmd BufWritePost bm-files,bm-dirs !shortcuts
-
-" Run xrdb whenever Xdefaults or Xresources are updated.
-autocmd BufRead,BufNewFile Xresources,Xdefaults,xresources,xdefaults set filetype=xdefaults
-autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 
 
 " Function for toggling the bottom statusbar:
