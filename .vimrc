@@ -1,17 +1,6 @@
-
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Dec 17
-"
-" To use it, copy it to
-"	       for Unix:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"	 for MS-Windows:  $VIM\_vimrc
-"	      for Haiku:  ~/config/settings/vim/vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
 set nocompatible
+set number
+set numberwidth=2
 filetype plugin on
 syntax on
 " When started as "evim", evim.vim will already have done these settings, bail
@@ -55,4 +44,5 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-colorscheme nord
+
+
