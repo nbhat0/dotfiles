@@ -4,16 +4,14 @@ PS1="%B{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta
 
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+# export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-### "bat" as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 
 export PATH=$HOME/.config/rofi/bin:$PATH
 
@@ -121,7 +119,6 @@ alias la='exa -al --color=always --group-directories-first'
 alias ls='exa -a --color=always --group-directories-first'  
 
 # pacman and paru
-alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
 alias parusyu='paru -Syu --noconfirm'              # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 
@@ -136,6 +133,7 @@ alias df='df -h'
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init zsh)"
 
-fastfetch
+afetch
+# fm6000 -f ~/.local/bin/arch_logo.txt -c cyan -de dwm
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/gbhat08/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
