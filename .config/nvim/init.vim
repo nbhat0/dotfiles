@@ -11,7 +11,10 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'arcticicestudio/nord-vim'
+Plug 'nvim-lualine/lualine.vim'
 call plug#end()
+
 
 set title
 set go=a
@@ -22,7 +25,9 @@ set undofile
 set nowrap
 set autoindent
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkgrey ctermfg=white
+hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
+hi CursorLine   cterm=bold ctermbg=darkgrey ctermfg=NONE
+colorscheme nord
 
 " Some basics:
 	nnoremap c "_c
