@@ -3,8 +3,7 @@ autoload -U colors && colors
 PS1="%B{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 ### EXPORT
-export TERM="xterm-256color"                      # getting proper colors
-# export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export TERM="xterm-256color"
 
 # History in cache directory:
 HISTSIZE=10000
@@ -35,16 +34,6 @@ fi
 if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
 fi
-
-### CHANGE TITLE OF TERMINALS
-case ${TERM} in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-        ;;
-  screen*)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-    ;;
-esac
 
 ### Function extract for common file formats ###
 SAVEIFS=$IFS
@@ -112,28 +101,26 @@ up () {
 }
 
 # vim and emacs
-alias vim="nvim"
+# alias vi = "vim"
+alias vi="nvim"
 
-# Changing "ls" to "exa"
-alias la='exa -al --color=always --group-directories-first' 
-alias ls='exa -a --color=always --group-directories-first'  
+alias la='exa -al --color=always --group-directories-first'
+alias ls='exa -a --color=always --group-directories-first'
 
 # pacman and paru
 alias parusyu='paru -Syu --noconfirm'              # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 
-# Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # adding flags
-alias df='df -h'                          
+alias df='df -h'
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init zsh)"
 
 afetch
-# fm6000 -f ~/.local/bin/arch_logo.txt -c cyan -de dwm
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/gbhat08/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
