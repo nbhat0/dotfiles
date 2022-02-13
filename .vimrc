@@ -3,6 +3,10 @@ set number
 set numberwidth=2
 filetype plugin on
 syntax on
+set clipboard+=unamedplus
+highlight LineNr ctermfg=darkgrey
+cmap w!! w !sudo tee > /dev/null %
+
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
@@ -43,6 +47,5 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
-
 
 
