@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use "monaqa/dial.nvim"
   use "norcalli/nvim-colorizer.lua"
   use "windwp/nvim-spectre"
-  use "folke/zen-mode.nvim"
+  -- use "folke/zen-mode.nvim"
   use "karb94/neoscroll.nvim"
   use "folke/todo-comments.nvim"
   use "kevinhwang91/nvim-bqf"
@@ -89,12 +89,11 @@ return packer.startup(function(use)
   }
 
   -- Colorschemes
-  use "folke/tokyonight.nvim"
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
-  use "rose-pine/neovim"
-  use "rebelot/kanagawa.nvim"
-  use "arcticicestudio/nord-vim"
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- use "lunarvim/darkplus.nvim"
+  -- use "rose-pine/neovim"
+  -- use "arcticicestudio/nord-vim"
+  use "rmehri01/onenord.nvim"
 
   -- cmp plugins
   use {"hrsh7th/nvim-cmp",
