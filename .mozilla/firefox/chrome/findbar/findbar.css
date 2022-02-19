@@ -64,7 +64,7 @@ hbox[anonid="findbar-textbox-wrapper"] toolbarbutton[disabled]
 
 hbox[anonid="findbar-textbox-wrapper"] toolbarbutton .toolbarbutton-text
 {
-  visibility: collapse !important;
+	visibility: collapse !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"] toolbarbutton:not([disabled]):hover
