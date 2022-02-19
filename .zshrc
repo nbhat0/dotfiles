@@ -14,6 +14,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export PATH=$HOME/.config/rofi/bin:$PATH
 
+export FZF_DEFAULT_COMMAND="find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'"
 
 ### SET VI MODE ###
 # Comment this line out to enable default emacs-like bindings
@@ -35,6 +36,7 @@ if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
 fi
 
+export PATH=$PATH:~/bin
 ### Function extract for common file formats ###
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
@@ -100,8 +102,7 @@ up () {
   fi
 }
 
-# vim and emacs
-# alias vi = "vim"
+# vim
 alias vi="nvim"
 
 alias la='exa -al --color=always --group-directories-first'
@@ -117,6 +118,10 @@ alias fgrep='fgrep --color=auto'
 
 # adding flags
 alias df='df -h'
+
+# poweroff & reboot 
+alias poweroff='poweroff now'
+alias reboot='reboot now'
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init zsh)"
